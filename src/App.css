@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  background-image: url(".././public/img/body-bd.png");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 127px;
+}
+
+.card-number {
+  font-size: 28px;
+  letter-spacing: 3.422px;
+  position: absolute;
+  bottom: 70px;
+  left: 35px;
+  text-transform: uppercase;
+}
+#card-holder {
+  text-transform: capitalize;
+}
+.card-holder,
+.card-date {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 27px;
+}
+
+.card-date {
+  right: 32px;
+}
+
+.form {
+  max-width: 381px;
+  display: flex;
+  flex-direction: column;
+  label {
+    color: #21092f;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  input {
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #dfdee0;
+    padding: 11px 16px;
+    font-family: "Space Grotesk", sans-serif;
+    margin-bottom: 26px;
+  }
+  .card-inform {
+    display: flex;
+    .card-inform_cvc {
+      input {
+        margin: 9px 0 40px 0;
+      }
+    }
+    .card-inform_date {
+      input {
+        width: 70px;
+        margin: 9px 10px 40px 0;
+      }
+    }
+  }
+
+  .error-inp {
+    margin-bottom: 8px !important;
+    border: 1px solid #ff5050;
+  }
+
+  .error-msg {
+    color: #ff5050;
+    margin-bottom: 26px;
+  }
+}
+
+button {
+  border-radius: 8px;
+  background: #21092f;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  font-family: "Space Grotesk", sans-serif;
+  outline: none;
+  cursor: pointer;
+}
+
+.card {
+  width: 447px;
+  height: 245px;
+  color: #fff;
+  padding: 28px 32px;
+  position: relative;
+  box-shadow: 0px 10px 150px 10px #00000033;
+  border-radius: 10px;
+}
+
+.card-1 {
+  background-image: url(".././public/img/card-1.png");
+}
+
+.card-2 {
+  background-image: url(".././public/img/card-2.png");
+}
+
+.card-2 {
+  margin: 40px 0 0 64px;
+  p {
+    position: absolute;
+    font-size: 14px;
+    letter-spacing: 2px;
+    top: 111px;
+    right: 57px;
+  }
+  img {
+    position: absolute;
+    left: 132px;
+    bottom: 42px;
+  }
+}
+
+.form-submitted {
+  width: 381px;
+  text-align: center;
+  h2 {
+    font-size: 28px;
+    letter-spacing: 3.422px;
+    margin: 35px 0 8px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+input:focus {
+  border: 1px solid #6348fe;
+}
+
+.hide {
+  display: none;
+}
+
+.true-mm {
+  margin-bottom: 8px !important;
+}
+
+@media (max-width: 1050px) {
+  body {
+    min-height: 240px;
+    background-image: url("../public/img/body-bg-mob.png");
+    background-repeat: repeat-x;
+  }
+  .container {
+    flex-direction: column;
+    gap: 50px;
+    max-width: 327px;
+    position: relative;
+    margin: 32px auto;
+    justify-content: start;
+    align-items: stretch;
+  }
+  .cards {
+    padding: 32px 16px;
+    position: relative;
+    width: 327px;
+    height: 240px;
+  }
+  .card {
+    width: 285px;
+    height: 156px;
+    padding: 18px;
+  }
+  .card-1 {
+    position: absolute;
+    bottom: -10px;
+    left: -17px;
+    z-index: 2;
+    .card-number {
+      font-size: 18px;
+      letter-spacing: 2.2px;
+      left: 17px;
+      bottom: 47px;
+    }
+    img {
+      width: 54px;
+    }
+    .card-holder {
+      bottom: 20px;
+      font-size: 9px;
+    }
+    .card-date {
+      font-size: 9px;
+      bottom: 20px;
+    }
+  }
+  .card-2 {
+    position: absolute;
+    top: 0;
+    right: -17px;
+    z-index: 1;
+    margin: 0;
+    background-image: url("../public/img/card-2-mob.png");
+    img {
+      display: none;
+    }
+  }
+  .card-inform_cvc{
+    max-width: 124px;
+    input{
+      max-width: 164px;
+    }
+  }
+  .card-inform_date{
+    max-width: 152px;
+    input{
+      max-width: 62px;
+      margin: 9px 9px 9px 0;
+    }
+  }
+  .form-submitted{
+    max-width: 327px;
+  }
+}
